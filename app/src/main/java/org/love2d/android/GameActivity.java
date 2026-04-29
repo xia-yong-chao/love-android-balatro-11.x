@@ -65,10 +65,6 @@ public class GameActivity extends SDLActivity {
     @Override
     protected String getMainSharedObject() {
         String[] libs = getLibraries();
-        // Since Lollipop, you can simply pass "libname.so" to dlopen
-        // and it will resolve correct paths and load correct library.
-        // This is mandatory for extractNativeLibs=false support in
-        // Marshmallow.
         return "lib" + libs[libs.length - 1] + ".so";
     }
 
